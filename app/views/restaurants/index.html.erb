@@ -1,0 +1,15 @@
+<h1>Breakfast Club</h1>
+
+<p>
+
+  <% @restaurant.each do |looped_restaurant| %>
+    <%= render 'location', location: looped_restaurant %>
+  <% end %>
+
+<%= link_to 'Create New Restaurant',  new_restaurant_path %>
+
+
+<%= render @restaurants %>
+
+
+</p>
