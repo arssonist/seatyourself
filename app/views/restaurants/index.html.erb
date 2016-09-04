@@ -3,7 +3,7 @@
 <%= render @restaurants %>
 <p>
 <% @restaurants.each do |restaurant| %>
-    <%= render 'location', location: restaurant %>
+    <%= render 'restaurant', restaurant: restaurant %>
   <% end %>
 
 <%= link_to 'Create New Restaurant',  new_restaurant_path %>
