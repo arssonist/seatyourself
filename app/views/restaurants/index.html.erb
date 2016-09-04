@@ -2,11 +2,11 @@
 
 <p>
 
-  <% @restaurant.each do |looped_restaurant| %>
-    <%= render 'location', location: looped_restaurant %>
+  <% @restaurants.each do |looped_restaurant| %>
+    <%= render 'restaurants', location: looped_restaurant %>
   <% end %>
 
-<%= link_to 'Create New Restaurant',  new_restaurant_path %>
+<%= link_to 'New Restaurant',  new_restaurant_path %>
 
 
 <%= render @restaurants %>
