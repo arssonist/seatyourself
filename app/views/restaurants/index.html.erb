@@ -1,15 +1,11 @@
 <h1>Breakfast Club</h1>
 
+<%= render @restaurants %>
 <p>
-
-  <% @restaurant.each do |looped_restaurant| %>
-    <%= render 'location', location: looped_restaurant %>
+<% @restaurants.each do |restaurant| %>
+    <%= render 'location', location: restaurant %>
   <% end %>
 
 <%= link_to 'Create New Restaurant',  new_restaurant_path %>
-
-
-<%= render @restaurants %>
-
 
 </p>
