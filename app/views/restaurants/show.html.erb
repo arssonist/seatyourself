@@ -1,5 +1,14 @@
-<h1> Make a reservation for your restaurant here </h1>
+<h1> Restaurant Show Page </h1>
 
-<h1><%= @restaurant.name %></h1>
+<h2><%= @restaurant.name %></h2>
 
-<%= render 'restaurant', restaurant: @restaurant %>
+<h3><%= link_to 'Create New Reservation', new_restaurant_reservation_path(@restaurant) %></h3>
+
+<%= link_to 'Edit Restaurant', edit_restaurant_path %>
+
+<h4><%= link_to 'View All Reservations', restaurant_reservations_path(@restaurant) %></h4>
+
+<%= link_to 'Delete', restaurant_path(@restaurant), method: :delete, data: {confirm: "Are you sure you want to delete the restaurant'#{@restaurant.name}'? This cannot be undone!"}%>
+
+
+<%= render @restaurant %>
