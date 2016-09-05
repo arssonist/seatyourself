@@ -9,12 +9,8 @@ class ReservationsController < ApplicationController
 
   def show
     @reservation = Reservation.find(params[:id])
-    if @reservation.save
-      redirect_to [@restaurant,@reservation]
-    else
-      redirect_to new_restaurant_reservation_path
+    
   end
-end
   def new
     @reservation = Reservation.new
   end
