@@ -1,2 +1,26 @@
-<h1>Restaurants#new</h1>
-<p>Find me in app/views/restaurants/new.html.erb</p>
+<h1>Create New Reservation</h1>
+
+
+<%= link_to 'View All Reservations', restaurant_reservations_path %>
+
+<%= form_for [@restaurant, @resvervation] do |f| %>
+  <p>
+    <%= f.label :name %>
+    <%= f.text_field :name %>
+  </p>
+
+  <p>
+    <%= f.label :date %>
+    <%= f.date_field :date %>
+  </p>
+
+  <p>
+    <%= f.label :capacity %>
+    <%= f.number_field :capacity %>
+  </p>
+
+  <p>
+    <%= f.submit %>
+  </p>
+
+<% end %>

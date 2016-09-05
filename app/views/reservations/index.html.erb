@@ -1,0 +1,14 @@
+<h1> Reservation Page </h1>
+
+  <h1><%= @restaurant.name %></h1>
+
+<div>
+  <% @reservations.each do |reservation| %>
+  
+  <%= reservation.number_of_guests%>
+    <%= reservation.date_of_reservation %><br />
+
+</div>
+
+
+<% end %>

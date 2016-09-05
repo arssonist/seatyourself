@@ -1,11 +1,16 @@
 <h1>Breakfast Club</h1>
 
-<%= render @restaurants %>
 <p>
-<% @restaurants.each do |restaurant| %>
-    <%= render 'restaurant', restaurant: restaurant %>
-  <% end %>
+
+<!-- #erased loop because above code is equilavent. This way the list does not appear twice -->
 
 <%= link_to 'Create New Restaurant',  new_restaurant_path %>
 
+
+
+
 </p>
+
+
+
+<%= render @restaurants %>

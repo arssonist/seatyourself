@@ -1,0 +1,21 @@
+<h1>Create New Reservation</h1>
+
+
+<%= link_to 'View All Reservations', restaurant_reservations_path %>
+
+<%= form_for [@restaurant, @reservation] do |f| %>
+  <p>
+    <%= f.label :number_of_guests %>
+    <%= f.text_field :number_of_guests %>
+  </p>
+
+  <p>
+    <%= f.label :date_of_reservation %>
+    <%= f.date_field :date_of_reservation %>
+  </p>
+
+  <p>
+    <%= f.submit %>
+  </p>
+
+<% end %>
