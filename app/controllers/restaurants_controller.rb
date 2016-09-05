@@ -14,8 +14,18 @@ class RestaurantsController < ApplicationController
 
   end
 
-  def edit
+  def create
+    @restaurant = Restaurant.new(restaurant_params)
+
+    if @restaurant.save
+      redirect_to restaurants_path
+    else
+      redirect_to new_restaurant_path
+    end
   end
 
+  def restaurant_params
+      params.require(:restaurant).permit(:name, :capcity)
+    end
 
 end
